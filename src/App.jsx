@@ -11,7 +11,7 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/lodging/:id" element={<Logement />} />
-      <Route path="*" element={<Error404 />} /> {/* Route pour gérer les 404 */}
+      <Route path="*" element={<Error404 />} />
     </Routes>
   );
 };
