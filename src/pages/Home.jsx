@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Importation du composant Link
 import Layout from "../components/Layout";
+import logements from "../data/logements.json"; // Importation des données JSON
 import "./Home.scss";
 
 const Home = () => {
@@ -10,9 +11,10 @@ const Home = () => {
         <h1>Chez vous, partout et ailleurs</h1>
       </div>
       <section className="home-gallery">
-        {[...Array(6)].map((_, index) => (
-          <Link to={`/lodging/${index + 1}`} key={index} className="home-card">
-            <h2 className="home-card-title">Titre de la location</h2>
+        {logements.map((logement) => (
+          <Link to={`/lodging/${logement.id}`} key={logement.id} className="home-card">
+            <img src={logement.cover} alt={logement.title} className="home-card-image"/>
+            <h2 className="home-card-title">{logement.title}</h2>
           </Link>
         ))}
       </section>

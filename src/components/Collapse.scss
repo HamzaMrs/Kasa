@@ -1,0 +1,54 @@
+.collapse {
+    max-width: 1023px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 30px auto 0 auto;
+    overflow: hidden;
+    border: none;
+  
+    .collapse-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      background-color: #FF6060;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      h2 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: white
+      }
+  
+      i {
+        font-size: 24px;
+        color: white;
+        transition: transform 0.3s ease;
+      }
+
+    }
+  
+    .collapse-content {
+      padding: 15px;
+      background-color:#F6F6F673;
+      font-size: 18px;
+      border-radius: 10px;
+      max-height: 0;
+      animation: slideDown 0.5s ease forwards;
+  
+      @keyframes slideDown {
+        from {
+          max-height: 0;
+          opacity: 0;
+        }
+        to {
+          max-height: 500px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  

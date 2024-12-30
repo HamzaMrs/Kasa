@@ -10,11 +10,11 @@
       margin: 139px auto;
     
       @media (max-width: 768px) {
-        font-size: 150px;  /* Réduit la taille du texte sur les écrans plus petits */
+        font-size: 150px;  
       }
   
       @media (max-width: 480px) {
-        font-size: 96px;  /* Encore plus petit sur les écrans très petits */
+        font-size: 96px;  
       }
     }
   
@@ -24,6 +24,10 @@
       color: #FF6060;
       font-size: 36px;
       margin-bottom: 139px;
+
+      @media (max-width: 480px) {
+        font-size: 14px;
+      }
     }
   
     .error404-link {
