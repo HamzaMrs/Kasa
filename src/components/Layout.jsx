@@ -1,6 +1,6 @@
 // src/components/Layout.jsx
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Layout.scss";
 import logo from "../photos/logo.png";
 import logoFooter from "../photos/logo-footer.png";
@@ -11,8 +11,8 @@ const Layout = ({ children }) => {
       <header className="layout-header">
         <img src={logo} alt="Kasa Logo" className="layout-logo" />
         <nav className="layout-nav">
-          <Link to="/" className="layout-nav-link">Accueil</Link>
-          <Link to="/about" className="layout-nav-link">À Propos</Link>
+          <NavLink to="/" className={({ isActive }) => isActive ? "layout-nav-link active-link" : "layout-nav-link"}>Accueil</NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? "layout-nav-link active-link" : "layout-nav-link"}>À Propos</NavLink>
         </nav>
       </header>
 
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 
       <footer className="layout-footer">
         <img src={logoFooter} alt="Kasa Logo" className="logo-footer" />
-        <p>© 2020 Kasa. All rights reserved</p>
+        <p className="footer-text">© 2020 Kasa. All rights reserved</p>
       </footer>
     </div>
   );

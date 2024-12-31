@@ -10,12 +10,13 @@
       margin: 0 auto;
       max-width: 1240px;
       width: 100%;
+      box-sizing: border-box;
   
       .layout-logo {
         width: 210.32px;
         height: 68px;
 
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
           width: 145px;
           height: 46.88px;
         }
@@ -40,6 +41,9 @@
           }
   
           &:hover {
+            text-decoration: underline;
+          }
+          &.active-link {
             text-decoration: underline;
           }
         }
@@ -70,6 +74,12 @@
         height: 40px;
         margin-top: 66px;
         margin-bottom: 29px;
+      }
+      .footer-text{
+        @media (max-width: 600px) {
+          font-size: 12px;
+          margin-top: 0;
+        }
       }
     }
   }

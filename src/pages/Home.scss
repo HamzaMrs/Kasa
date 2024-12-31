@@ -19,13 +19,12 @@
     box-shadow: 0px 4px 4px 0px #00000040;
     padding: 16px;
     box-sizing: border-box;
-
     @media (max-width: 850px) {
       font-size: 15px;
+      height: 111px;
     }
   }
 
-  
 
   &-gallery {
     display: grid;
@@ -36,7 +35,11 @@
     border-radius: 25px;
     margin: 50px auto;
     max-width: 1240px;
-
+    @media (max-width: 500px){
+      padding: 0;
+      background-color: white;
+      justify-items: center;
+    }
 
 
     .home-card {
@@ -47,8 +50,6 @@
       height: 340px;
       position: relative;
       overflow: hidden;
-  
-
       @media (max-width: 500px) {
         width: 335px;
         height: 255px;
@@ -76,7 +77,7 @@
       
       .home-card-title {
         position: absolute;
-        top: 268px;
+        bottom: 10px;
         left: 10px;
         white-space: normal;
         font-size: 18px;
@@ -84,6 +85,9 @@
         margin: 10px;
         z-index: 2;
         text-decoration: none;
+        @media (max-width: 500px) {
+          bottom: 5px; 
+        }
       }
     }
   }

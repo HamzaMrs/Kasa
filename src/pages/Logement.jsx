@@ -4,6 +4,7 @@ import logementsData from "../data/logements.json"; // Assurez-vous d'importer l
 import Layout from "../components/Layout";
 import "./Logement.scss";
 import Collapse from "../components/Collapse.jsx";
+import ImageCarousel from "../components/ImageCarousel.jsx";
 
 const Logement = () => {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
@@ -23,11 +24,7 @@ const Logement = () => {
   return (
     <Layout>
       <div className="lodging-details">
-        <img
-          src={logement.cover}
-          alt={logement.title}
-          className="lodging-cover"
-        />
+        <ImageCarousel pictures={logement.pictures}  alt={logement.title} className="lodging-cover"/>
         <div className="lodging-details-content">
           <div className="lodging-info">
             <h1 className="lodging-details-title">{logement.title}</h1>
