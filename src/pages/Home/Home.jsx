@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Importation du composant Link
-import Layout from "../components/Layout";
-import logements from "../data/logements.json"; // Importation des données JSON
+import Layout from "../../components/Layout/Layout";
+import logements from "../../data/logements.json"; // Importation des données JSON
 import "./Home.scss";
 
 const Home = () => {

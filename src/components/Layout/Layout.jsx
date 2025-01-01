@@ -2,8 +2,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Layout.scss";
-import logo from "../photos/logo.png";
-import logoFooter from "../photos/logo-footer.png";
+import logo from "../../photos/logo.png";
+import logoFooter from "../../photos/logo-footer.png";
 
 const Layout = ({ children }) => {
   return (

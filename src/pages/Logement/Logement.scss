@@ -45,6 +45,9 @@
           display: flex;
           gap: 10px;
           flex-wrap: wrap;
+          @media (max-width: 500px){
+            margin-top: 0;
+          }
   
           .lodging-tag {
             display: flex;
@@ -56,6 +59,12 @@
             font-size: 14px;
             justify-content: center;
             align-items: center;
+            @media (max-width: 500px){
+              min-width: 0;
+              height: 18px;
+              width: 84px;
+              font-size: 10px;
+            }
           }
         }
       }
@@ -66,20 +75,18 @@
           display: flex;
           flex-direction: row-reverse;
           justify-content: space-between;
-          align-items: baseline;
         }
       
         .host-header {
           display: flex;
           align-items: center; 
+          justify-content: flex-end;
         }
       
         .lodging-host-name {
           font-size: 16px;
           color: #FF6060;
           margin-right: 16px; 
-          white-space: normal;
-          line-height: 1.2; 
         }
       
         .lodging-host-image {
@@ -95,9 +102,13 @@
         }
   
         .lodging-rating {
-            margin-top: 21px;
-            display: flex;
-            justify-content: space-between;
+          width: 170px;
+          margin-top: 21px;
+          display: flex;
+          justify-content: space-between;
+          @media (max-width: 500px){
+            width: 100px;
+          }
           
             .fa-solid {
               font-size: 20px;
@@ -124,6 +135,10 @@
         .collapse{
             max-width: 582px;
             width: 100%;
+
+            h2{
+              font-size: 18px;
+            }
 
             .equipment-list{
                 list-style-type: none;

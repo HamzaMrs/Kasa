@@ -1,7 +1,7 @@
 // src/pages/Error404.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout/Layout";
 import "./Error.scss";
 
 const Error404 = () => {

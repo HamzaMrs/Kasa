@@ -1,8 +1,8 @@
 // src/pages/About.jsx
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout/Layout.jsx";
 import "./About.scss";
-import Collapse from "../components/Collapse.jsx";
+import Collapse from "../../components/Collapse/Collapse.jsx";
 
 const About = () => {
   return (

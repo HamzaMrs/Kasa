@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import logementsData from "../data/logements.json"; // Assurez-vous d'importer les données correctement
-import Layout from "../components/Layout";
+import logementsData from "../../data/logements.json"; // Assurez-vous d'importer les données correctement
+import Layout from "../../components/Layout/Layout.jsx";
 import "./Logement.scss";
-import Collapse from "../components/Collapse.jsx";
-import ImageCarousel from "../components/ImageCarousel.jsx";
+import Collapse from "../../components/Collapse/Collapse.jsx";
+import ImageCarousel from "../../components/ImageCarousel/ImageCarousel.jsx";
 
 const Logement = () => {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
@@ -39,7 +39,7 @@ const Logement = () => {
           </div>
           <div className="lodging-host">
             <div className="host-header">
-              <p className="lodging-host-name">{logement.host.name}</p>
+              <p className="lodging-host-name">  {logement.host.name.split(" ")[0]}<br />{logement.host.name.split(" ")[1]}</p>
               <img src={logement.host.picture} alt={logement.host.name} className="lodging-host-image"/>
             </div>
             <div className="lodging-rating">

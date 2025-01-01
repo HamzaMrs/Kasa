@@ -14,13 +14,17 @@ const ImageCarousel = ({ pictures }) => {
 
   return (
     <div className="image-carousel">
-      <button className="carousel-button prev" onClick={prevImage}>
-      <i className="fa-solid fa-chevron-left"></i>
-      </button>
-      <img src={pictures[currentIndex]} alt="lodging" className="lodging-cover"/>
-      <button className="carousel-button next" onClick={nextImage}>
-      <i className="fa-solid fa-chevron-right"></i>
-      </button>
+      {pictures.length > 1 && ( // Afficher la flèche "Précédent" uniquement si plusieurs images
+        <button className="carousel-button prev" onClick={prevImage}>
+          <i className="fa-solid fa-chevron-left"></i>
+        </button>
+      )}
+      <img src={pictures[currentIndex]} alt="lodging" className="lodging-cover" />
+      {pictures.length > 1 && ( // Afficher la flèche "Suivant" uniquement si plusieurs images
+        <button className="carousel-button next" onClick={nextImage}>
+          <i className="fa-solid fa-chevron-right"></i>
+        </button>
+      )}
       <div className="image-counter">
         {currentIndex + 1} / {pictures.length}
       </div>

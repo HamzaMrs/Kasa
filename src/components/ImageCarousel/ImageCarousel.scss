@@ -9,6 +9,9 @@
     width: 100%;
     max-width: 1240px; 
     height: auto;
+    @media (max-width: 500px){
+      height: 255px !important;
+    }
   }
   
   .carousel-button {
@@ -20,6 +23,9 @@
     font-size: 80px;
     border: none;
     cursor: pointer;
+    @media (max-width: 600px){
+      font-size: 30px;
+    }
   }
   
   .prev {
