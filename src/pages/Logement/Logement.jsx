@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import logementsData from "../../data/logements.json"; // Assurez-vous d'importer les données correctement
+import logementsData from "../../data/logements.json"; 
+import { Navigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout.jsx";
 import "./Logement.scss";
 import Collapse from "../../components/Collapse/Collapse.jsx";
@@ -10,16 +11,10 @@ const Logement = () => {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
   const logement = logementsData.find((logement) => logement.id === id); // Cherche le logement avec cet ID
 
-  // Si le logement n'est pas trouvé, afficher une page 404 ou une erreur
+  // Si le logement n'est pas trouvé, afficher une page 404
   if (!logement) {
-    return (
-      <Layout>
-        <div className="lodging-not-found">
-          <h2>Logement non trouvé</h2>
-        </div>
-      </Layout>
-    );
-  }
+    return <Navigate to="/error" />;
+}
 
   return (
     <Layout>
