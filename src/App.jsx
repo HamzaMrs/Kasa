@@ -7,12 +7,14 @@ import Logement from './pages/Logement/Logement';
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/lodging/:id" element={<Logement />} />
-      <Route path="*" element={<Error404 />} />
-    </Routes>
+    <BrowserRouter basename="/Kasa">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/lodging/:id" element={<Logement />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
